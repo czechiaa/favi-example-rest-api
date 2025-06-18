@@ -1,0 +1,14 @@
+services:
+    mariadb:
+        image: mariadb:latest
+        ports:
+            - '3306:3306'
+        environment:
+            - ALLOW_EMPTY_PASSWORD=yes
+            - MARIADB_DATABASE=favi
+            - MARIADB_PORT_NUMBER=3306
+            - MARIADB_ROOT_USER=root
+            - MARIADB_ROOT_PASSWORD=rootp4ssw0rd
+            - MARIADB_USER=user
+            - MARIADB_PASSWORD=p4ssw0rd
+        container_name: favi
